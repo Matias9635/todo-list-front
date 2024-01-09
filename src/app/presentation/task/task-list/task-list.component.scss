@@ -1,0 +1,84 @@
+.card {
+    width: 50vw;
+    border: 0;
+
+    .card-header {
+        background-color: #262626;
+
+        .title {
+            font-size: 3rem;
+            color: white;
+            font-weight: bold;
+        }
+    }
+}
+
+.add-task-btn {
+    background-color: #ffdb63;
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    width: 6rem;
+}
+
+table {
+    font-size: 1.25rem;
+}
+
+.name-input {
+    width: 90%;
+    font-size: 1.25rem;
+    background-color: #262626;
+    border: 0;
+    color: white;
+}
+
+input[type="text"]::placeholder {
+    color: white;
+    opacity: 0.5;
+}
+
+.card-body {
+    background-color: #404040;
+}
+
+.task-item {
+    border-radius: 10px;
+    background-color: #262626;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+
+    .task-name {
+        font-weight: 500;
+
+        .task-date {
+            opacity: 0.5;
+        }
+    }
+}
+
+.form-check-input {
+    font-size: 1.5rem;
+}
+
+.form-check-input:checked {
+    background-color: #ffdb63;
+    border: 0;
+    font-size: 1.5rem;
+}
+
+.actions-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 10%;
+
+    input[type="checkbox"] {
+        margin-top: 0;
+    }
+}

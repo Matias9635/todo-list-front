@@ -1,0 +1,31 @@
+<div *ngIf="taskForm">
+    <div class="modal-header">
+		<h4 class="modal-title">{{title}}</h4>
+		<button type="button" class="btn-close" (click)="dismiss()"></button>
+	</div>
+    <div class="modal-body">
+        <form [formGroup]="taskForm">
+            <input *ngIf="task" type="text" class="form-control my-3 text-input" placeholder="Task name" formControlName="name">
+
+            <div class="input-group my-3">
+                <input
+                    class="form-control text-input"
+                    placeholder="Deadline"
+                    ngbDatepicker
+                    #d="ngbDatepicker"
+                    
+                    formControlName="deadline"
+                />
+                <button class="btn btn-outline-secondary bi bi-calendar3 save-button" (click)="d.toggle()" type="button"></button>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+		<button
+            type="button"
+            class="btn btn-primary"
+            (click)="saveForm()"
+            [disabled]="taskForm.invalid"
+            >Save</button>
+	</div>
+</div>
